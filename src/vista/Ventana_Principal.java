@@ -148,7 +148,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu1MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
