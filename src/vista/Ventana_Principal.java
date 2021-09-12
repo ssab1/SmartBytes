@@ -83,7 +83,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        ImageIcon icon = new ImageIcon(getClass().getResource("/imagenes/fondo.jpeg"));
+        ImageIcon icon = new ImageIcon(getClass().getResource("/imagenes/fondo2.jpg"));
         Image image = icon.getImage();
         Ventana_general = new javax.swing.JDesktopPane(){
             public void paintComponent(Graphics g){
@@ -113,16 +113,15 @@ public class Ventana_Principal extends javax.swing.JFrame {
         );
         Ventana_generalLayout.setVerticalGroup(
             Ventana_generalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 342, Short.MAX_VALUE)
+            .addGap(0, 326, Short.MAX_VALUE)
         );
 
-        jMenuBar1.setBorderPainted(false);
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        Menu_Ventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja-registradora.png"))); // NOI18N
+        Menu_Ventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja-registradora48.png"))); // NOI18N
         Menu_Ventas.setText("Venta");
-        Menu_Ventas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Menu_Ventas.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         Menu_Ventas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Menu_VentasMouseClicked(evt);
@@ -132,7 +131,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cajaproducto.png"))); // NOI18N
         jMenu2.setText("Productos");
-        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         Menu_Consulta_Producto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
         Menu_Consulta_Producto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -149,7 +148,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/reporte-de-negocios.png"))); // NOI18N
         jMenu3.setText("Reportes");
-        jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         Menu_Reporte_Rango_Fechas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         Menu_Reporte_Rango_Fechas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calendario.png"))); // NOI18N
@@ -170,7 +169,7 @@ public class Ventana_Principal extends javax.swing.JFrame {
 
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/configuraciones.png"))); // NOI18N
         jMenu4.setText("Ajustes");
-        jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem1.setText("jMenuItem1");

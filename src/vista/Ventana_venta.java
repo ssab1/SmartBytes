@@ -103,33 +103,33 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Bytes50.png"))); // NOI18N
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 30, 260, 70));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 620, 1360, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 610, 1360, 10));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel5.setText("Total:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 650, 50, 30));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 630, 50, 30));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("Iva:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 650, -1, 30));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 630, -1, 30));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("Descuento:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 650, 90, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 630, 90, 30));
 
         txtDescuentoVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txtDescuentoVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 650, 80, 30));
+        jPanel1.add(txtDescuentoVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 630, 80, 30));
 
         txtTotalVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txtTotalVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 650, 80, 30));
+        jPanel1.add(txtTotalVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 630, 80, 30));
 
         txtIvaVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(txtIvaVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 650, 80, 30));
+        jPanel1.add(txtIvaVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 630, 80, 30));
 
         btnGenerarVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnGenerarVenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja.png"))); // NOI18N
         btnGenerarVenta.setText("Generar Venta");
-        jPanel1.add(btnGenerarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 640, 160, 40));
+        jPanel1.add(btnGenerarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 630, 160, 40));
 
         jPanel2.setLayout(null);
 
@@ -177,7 +177,7 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jPanel2.add(RB_IngresoManual);
         RB_IngresoManual.setBounds(40, 320, 120, 25);
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 220, 430));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 220, 430));
 
         jPanel3.setLayout(null);
 
@@ -195,12 +195,12 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jPanel3.add(jScrollPane1);
         jScrollPane1.setBounds(20, 20, 1050, 350);
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 1090, 430));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 160, 1090, 430));
 
         btnCancelarVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCancelarVenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         btnCancelarVenta.setText("Cancelar Venta");
-        jPanel1.add(btnCancelarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 640, 160, 40));
+        jPanel1.add(btnCancelarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 630, 160, 40));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Bytes50.png"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 260, 70));
