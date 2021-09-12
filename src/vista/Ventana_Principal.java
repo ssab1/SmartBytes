@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package vista;
+
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
@@ -11,6 +12,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.Icon;
 import vista.Ventana_venta;
+
 /**
  *
  * @author basti
@@ -20,15 +22,16 @@ public class Ventana_Principal extends javax.swing.JFrame {
     /**
      * Creates new form Ventana_Principal
      */
-    
-    public Ventana_venta vent= null;
-    
+    public Ventana_venta vent = null;
+    public Ventana_Consulta_Producto vcp = null;
+    public Ventana_Reporte_Rango_Fechas vrrf=null;
+
     public Ventana_Principal() {
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
     }
 
-    void vent() {
+    void ventanaventas() {
         if (vent == null || vent.isClosed()) {
             vent = new Ventana_venta();
             this.Ventana_general.add(vent);
@@ -38,11 +41,39 @@ public class Ventana_Principal extends javax.swing.JFrame {
                 vent.show();
             } catch (Exception e) {
             }
-        }else{
-            JOptionPane.showMessageDialog(null, "Ventana abierta", "Error", JOptionPane.ERROR_MESSAGE,null);
+        } else {
+            JOptionPane.showMessageDialog(null, "Ventana abierta", "Error", JOptionPane.ERROR_MESSAGE, null);
         }
-            
+
     }
+    //Centrar JINTERNALFRAME en pantalla JDESKTOPPANE
+    void ventanaconsultaproductos() {
+        if (vcp == null || vcp.isClosed()) {
+            vcp = new Ventana_Consulta_Producto();
+            this.Ventana_general.add(vcp);
+            vcp.setVisible(true);
+            Dimension desktopSize = Ventana_general.getSize();
+            Dimension FrameSize = vcp.getSize();
+            vcp.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
+            vcp.show();
+        }else{
+             JOptionPane.showMessageDialog(null, "Ventana abierta", "Error", JOptionPane.ERROR_MESSAGE, null);
+        }
+    }
+    void ventanareporterangofechas(){
+       if (vrrf == null || vrrf.isClosed()) {
+            vrrf = new Ventana_Reporte_Rango_Fechas();
+            this.Ventana_general.add(vrrf);
+            vrrf.setVisible(true);
+            Dimension desktopSize = Ventana_general.getSize();
+            Dimension FrameSize = vrrf.getSize();
+            vrrf.setLocation((desktopSize.width - FrameSize.width) / 2, (desktopSize.height - FrameSize.height) / 2);
+            vrrf.show();
+        }else{
+             JOptionPane.showMessageDialog(null, "Ventana abierta", "Error", JOptionPane.ERROR_MESSAGE, null);
+        } 
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,10 +92,12 @@ public class Ventana_Principal extends javax.swing.JFrame {
         }
         ;
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        Menu_Ventas = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        Menu_Consulta_Producto = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
+        Menu_Reporte_Rango_Fechas = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
@@ -87,36 +120,59 @@ public class Ventana_Principal extends javax.swing.JFrame {
         jMenuBar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuBar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja-registradora.png"))); // NOI18N
-        jMenu1.setText("Venta");
-        jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Menu_Ventas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja-registradora.png"))); // NOI18N
+        Menu_Ventas.setText("Venta");
+        Menu_Ventas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        Menu_Ventas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
+                Menu_VentasMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(Menu_Ventas);
 
         jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cajaproducto.png"))); // NOI18N
         jMenu2.setText("Productos");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/informacion.png"))); // NOI18N
-        jMenuItem3.setText("Datos Productos");
-        jMenu2.add(jMenuItem3);
+        Menu_Consulta_Producto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
+        Menu_Consulta_Producto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Menu_Consulta_Producto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/informacion.png"))); // NOI18N
+        Menu_Consulta_Producto.setText("Datos Productos");
+        Menu_Consulta_Producto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu_Consulta_ProductoActionPerformed(evt);
+            }
+        });
+        jMenu2.add(Menu_Consulta_Producto);
 
         jMenuBar1.add(jMenu2);
 
         jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/reporte-de-negocios.png"))); // NOI18N
         jMenu3.setText("Reportes");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+
+        Menu_Reporte_Rango_Fechas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Menu_Reporte_Rango_Fechas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/calendario.png"))); // NOI18N
+        Menu_Reporte_Rango_Fechas.setText("Rango De Fecha");
+        Menu_Reporte_Rango_Fechas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu_Reporte_Rango_FechasActionPerformed(evt);
+            }
+        });
+        jMenu3.add(Menu_Reporte_Rango_Fechas);
+
+        jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/reporte_diario.png"))); // NOI18N
+        jMenuItem3.setText("Reporte Diario");
+        jMenu3.add(jMenuItem3);
+
         jMenuBar1.add(jMenu3);
 
         jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/configuraciones.png"))); // NOI18N
         jMenu4.setText("Ajustes");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
         jMenuItem1.setText("jMenuItem1");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,13 +199,21 @@ public class Ventana_Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
-       vent();
-    }//GEN-LAST:event_jMenu1MouseClicked
+    private void Menu_VentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Menu_VentasMouseClicked
+        ventanaventas();
+    }//GEN-LAST:event_Menu_VentasMouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void Menu_Consulta_ProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu_Consulta_ProductoActionPerformed
+        ventanaconsultaproductos();
+    }//GEN-LAST:event_Menu_Consulta_ProductoActionPerformed
+
+    private void Menu_Reporte_Rango_FechasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Menu_Reporte_Rango_FechasActionPerformed
+        ventanareporterangofechas();
+    }//GEN-LAST:event_Menu_Reporte_Rango_FechasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,8 +251,10 @@ public class Ventana_Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Menu_Consulta_Producto;
+    private javax.swing.JMenuItem Menu_Reporte_Rango_Fechas;
+    private javax.swing.JMenu Menu_Ventas;
     private static javax.swing.JDesktopPane Ventana_general;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;

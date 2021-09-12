@@ -29,7 +29,7 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
     //obtener fecha actual de la pc
     void fecha() {
         Calendar calendar = new GregorianCalendar();
-        txtFecha.setText("" + calendar.get(calendar.YEAR) + "-" + (calendar.get(calendar.MONTH) + 1) + "-" + calendar.get(calendar.DAY_OF_MONTH));
+        lblFecha.setText("" + calendar.get(calendar.YEAR) + "-" + (calendar.get(calendar.MONTH) + 1) + "-" + calendar.get(calendar.DAY_OF_MONTH));
     }
 
     /*
@@ -64,29 +64,29 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
+        txtDescuentoVenta = new javax.swing.JTextField();
+        txtTotalVenta = new javax.swing.JTextField();
+        txtIvaVenta = new javax.swing.JTextField();
+        btnGenerarVenta = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jTextField5 = new javax.swing.JTextField();
+        txtCantidadProducto = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        txtCodigoProducto = new javax.swing.JTextField();
+        txtNombreProducto = new javax.swing.JTextField();
+        btnAgregar = new javax.swing.JButton();
+        RB_IngresoManual = new javax.swing.JRadioButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
+        TablaProductos = new javax.swing.JTable();
+        btnCancelarVenta = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        txtFecha = new javax.swing.JLabel();
-        clockDigital1 = new org.edisoncor.gui.varios.ClockDigital();
+        lblFecha = new javax.swing.JLabel();
+        lblHora = new org.edisoncor.gui.varios.ClockDigital();
 
         setClosable(true);
         setIconifiable(true);
@@ -117,25 +117,25 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jLabel7.setText("Descuento:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 650, 90, 30));
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 650, 80, 30));
+        txtDescuentoVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtDescuentoVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 650, 80, 30));
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 650, 80, 30));
+        txtTotalVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtTotalVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 650, 80, 30));
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 650, 80, 30));
+        txtIvaVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtIvaVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 650, 80, 30));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja.png"))); // NOI18N
-        jButton4.setText("Generar Venta");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 640, 160, 40));
+        btnGenerarVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnGenerarVenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/caja.png"))); // NOI18N
+        btnGenerarVenta.setText("Generar Venta");
+        jPanel1.add(btnGenerarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 640, 160, 40));
 
         jPanel2.setLayout(null);
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel2.add(jTextField5);
-        jTextField5.setBounds(20, 270, 140, 30);
+        txtCantidadProducto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.add(txtCantidadProducto);
+        txtCantidadProducto.setBounds(20, 270, 140, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Codigo");
@@ -158,31 +158,31 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jPanel2.add(jLabel10);
         jLabel10.setBounds(20, 30, 160, 30);
 
-        jTextField8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel2.add(jTextField8);
-        jTextField8.setBounds(20, 130, 140, 30);
+        txtCodigoProducto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.add(txtCodigoProducto);
+        txtCodigoProducto.setBounds(20, 130, 140, 30);
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel2.add(jTextField6);
-        jTextField6.setBounds(20, 200, 140, 30);
+        txtNombreProducto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.add(txtNombreProducto);
+        txtNombreProducto.setBounds(20, 200, 140, 30);
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-derecha.png"))); // NOI18N
-        jButton3.setText("Agregar");
-        jPanel2.add(jButton3);
-        jButton3.setBounds(40, 370, 120, 40);
+        btnAgregar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/flecha-derecha.png"))); // NOI18N
+        btnAgregar.setText("Agregar");
+        jPanel2.add(btnAgregar);
+        btnAgregar.setBounds(40, 370, 120, 40);
 
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButton2.setText("Ingreso Manual");
-        jPanel2.add(jRadioButton2);
-        jRadioButton2.setBounds(40, 320, 120, 25);
+        RB_IngresoManual.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        RB_IngresoManual.setText("Ingreso Manual");
+        jPanel2.add(RB_IngresoManual);
+        RB_IngresoManual.setBounds(40, 320, 120, 25);
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 220, 430));
 
         jPanel3.setLayout(null);
 
-        jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TablaProductos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        TablaProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -190,17 +190,17 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
                 "Codigo", "Nombre", "Precio Unitario", "Cantidad", "Descuento", "Total"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TablaProductos);
 
         jPanel3.add(jScrollPane1);
         jScrollPane1.setBounds(20, 20, 1050, 350);
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 1090, 430));
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
-        jButton5.setText("Cancelar Venta");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 640, 160, 40));
+        btnCancelarVenta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnCancelarVenta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
+        btnCancelarVenta.setText("Cancelar Venta");
+        jPanel1.add(btnCancelarVenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 640, 160, 40));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Bytes50.png"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 260, 70));
@@ -213,11 +213,11 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         jLabel12.setText("Fecha");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 50, 30));
 
-        txtFecha.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jPanel1.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 90, 30));
+        lblFecha.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jPanel1.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 100, 90, 30));
 
-        clockDigital1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel1.add(clockDigital1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 100, 40));
+        lblHora.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 90, 100, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1360, 700));
 
@@ -226,10 +226,11 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.edisoncor.gui.varios.ClockDigital clockDigital1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JRadioButton RB_IngresoManual;
+    private javax.swing.JTable TablaProductos;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnCancelarVenta;
+    private javax.swing.JButton btnGenerarVenta;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -245,16 +246,15 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JLabel txtFecha;
+    private javax.swing.JLabel lblFecha;
+    private org.edisoncor.gui.varios.ClockDigital lblHora;
+    private javax.swing.JTextField txtCantidadProducto;
+    private javax.swing.JTextField txtCodigoProducto;
+    private javax.swing.JTextField txtDescuentoVenta;
+    private javax.swing.JTextField txtIvaVenta;
+    private javax.swing.JTextField txtNombreProducto;
+    private javax.swing.JTextField txtTotalVenta;
     // End of variables declaration//GEN-END:variables
 }
