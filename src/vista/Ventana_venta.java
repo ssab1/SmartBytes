@@ -24,6 +24,7 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
     public Ventana_venta() {
         initComponents();
         fecha();
+        campos();
     }
 
     //obtener fecha actual de la pc
@@ -32,6 +33,12 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
         lblFecha.setText("" + calendar.get(calendar.YEAR) + "-" + (calendar.get(calendar.MONTH) + 1) + "-" + calendar.get(calendar.DAY_OF_MONTH));
     }
 
+    void campos(){
+        txtCodigoProducto.setEnabled(false);
+            txtNombreProducto.setEnabled(false);
+            txtCantidadProducto.setEnabled(false);
+            btnAgregar.setEnabled(false);
+    }
     /*
    void hora() {
 
@@ -174,6 +181,11 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
 
         RB_IngresoManual.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         RB_IngresoManual.setText("Ingreso Manual");
+        RB_IngresoManual.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RB_IngresoManualMouseClicked(evt);
+            }
+        });
         jPanel2.add(RB_IngresoManual);
         RB_IngresoManual.setBounds(40, 320, 120, 25);
 
@@ -223,6 +235,20 @@ public class Ventana_venta extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void RB_IngresoManualMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RB_IngresoManualMouseClicked
+        if (RB_IngresoManual.isSelected()) {
+         txtCodigoProducto.setEnabled(true);
+            txtNombreProducto.setEnabled(true);
+            txtCantidadProducto.setEnabled(true);
+            btnAgregar.setEnabled(true);   
+        }else{
+            txtCodigoProducto.setEnabled(false);
+            txtNombreProducto.setEnabled(false);
+            txtCantidadProducto.setEnabled(false);
+            btnAgregar.setEnabled(false);
+        }
+    }//GEN-LAST:event_RB_IngresoManualMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
